@@ -12,8 +12,8 @@ using PAWS_ProyectoFinal.Models;
 namespace PAWS_ProyectoFinal.Migrations
 {
     [DbContext(typeof(PAWSContext))]
-    [Migration("20230801220936_Actualizacion_Imagen")]
-    partial class Actualizacion_Imagen
+    [Migration("20230802172819_MigracionBD")]
+    partial class MigracionBD
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -93,6 +93,10 @@ namespace PAWS_ProyectoFinal.Migrations
 
                     b.Property<bool>("EstadoProducto")
                         .HasColumnType("bit");
+
+                    b.Property<string>("ImagenProducto")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NombreProducto")
                         .IsRequired()

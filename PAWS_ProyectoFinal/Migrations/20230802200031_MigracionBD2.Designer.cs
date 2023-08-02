@@ -12,8 +12,8 @@ using PAWS_ProyectoFinal.Models;
 namespace PAWS_ProyectoFinal.Migrations
 {
     [DbContext(typeof(PAWSContext))]
-    [Migration("20230730173341_MigracionBD")]
-    partial class MigracionBD
+    [Migration("20230802200031_MigracionBD2")]
+    partial class MigracionBD2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -184,7 +184,7 @@ namespace PAWS_ProyectoFinal.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("UltimaConexion")
+                    b.Property<DateTime?>("UltimaConexion")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");

@@ -11,7 +11,7 @@ namespace PAWS_ProyectoFinal.Models
         public string Correo { get; set; }
         public string Contrasena { get; set; }
         public string Telefono { get; set; }
-        public DateTime UltimaConexion { get; set; }
+        public DateTime? UltimaConexion { get; set; }
         public bool EstadoUsuario { get; set; }
 
     }

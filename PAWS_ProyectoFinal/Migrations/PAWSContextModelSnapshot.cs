@@ -92,6 +92,10 @@ namespace PAWS_ProyectoFinal.Migrations
                     b.Property<bool>("EstadoProducto")
                         .HasColumnType("bit");
 
+                    b.Property<string>("ImagenProducto")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("NombreProducto")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -178,7 +182,7 @@ namespace PAWS_ProyectoFinal.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("UltimaConexion")
+                    b.Property<DateTime?>("UltimaConexion")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");

@@ -19,8 +19,8 @@ namespace PAWS_ProyectoFinal.Migrations
                     DescripcionProducto = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PrecioProducto = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     StockProducto = table.Column<int>(type: "int", nullable: false),
-                    ImagenProducto = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    EstadoProducto = table.Column<bool>(type: "bit", nullable: false)
+                    EstadoProducto = table.Column<bool>(type: "bit", nullable: false),
+                    ImagenProducto = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
