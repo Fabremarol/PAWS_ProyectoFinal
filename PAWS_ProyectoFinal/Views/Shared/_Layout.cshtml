@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - PAWS_ProyectoFinal</title>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/PAWS_ProyectoFinal.styles.css" asp-append-version="true" />
+	<link href="~/css/style.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet" />
+</head>
+<body>
+	<header id="header" class="d-flex align-items-center">
+		<div class="container d-flex align-items-center justify-content-between" style="align-items:center; justify-content:space-between">
+
+			<h1 class="logo"><a href="index.html">Felectro<span>.</span></a></h1>
+			<!-- Uncomment below if you prefer to use an image logo -->
+			<!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
+
+			<nav id="navbar" class="navbar">
+				<ul>
+					<li><a class="nav-link scrollto active" asp-area=" " asp-controller="Home" asp-action="Index">Página Principal</a></li>
+					<li><a class="nav-link scrollto" asp-area=" " asp-controller="Home" asp-action="Privacy">Privacy</a></li>
+					<li><a class="nav-link scrollto" asp-area="" asp-controller="Producto" asp-action="Index">Productos</a></li>
+				</ul>
+				<i class="bi bi-list mobile-nav-toggle"></i>
+			</nav><!-- .navbar -->
+		</div>
+	</header><!-- End Header -->
+	
+		<main id="main" role="main">
+
+			<section id="portfolio" class="portfolio">
+				<div class="container" data-aos="fade-up">
+
+					<div class="section-title">
+						<h2>Sección de Productos</h2>
+						<h3>Los mejores productos en <span>Felectro</span></h3>
+					</div>
+
+
+					<div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+						<div class="col-lg-4 col-md-6 portfolio-item filter-app">
+							<img src="imagenes/productos/caja_herramientas.png" class="img-fluid" alt="">
+							<div class="portfolio-info">
+								<h4>Caja de Herramientas</h4>
+								<p>Caja de herramientas con 120 unidades</p>
+								<p>₡ 134000.00</p>
+								<a href="imagenes/productos/caja_herramientas.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+
+							</div>
+						</div>
+
+						<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+							<img src="imagenes/productos/juego_desatornillador.png" class="img-fluid" alt="">
+							<div class="portfolio-info">
+								<h4>Juego de Desatornilladores</h4>
+								<p>Juego de 10 unidades de desatornilladores de todo tipo</p>
+								<p>₡ 15000.00</p>
+								<a href="imagenes/productos/juego_desatornillador.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+
+							</div>
+						</div>
+
+						<div class="col-lg-4 col-md-6 portfolio-item filter-app">
+							<img src="imagenes/productos/taladro.png" class="img-fluid" alt="">
+							<div class="portfolio-info">
+								<h4>Taladro</h4>
+								<p>Taladro color amarillo</p>
+								<p>₡ 95000.00</p>
+								<a href="imagenes/productos/taladro.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 portfolio-item filter-app">
+							<img src="imagenes/productos/luces_led.png" class="img-fluid" alt="">
+							<div class="portfolio-info">
+								<h4>Luces LED</h4>
+								<p>20 unidades de luces LED colgantes</p>
+								<p>₡ 10000.00</p>
+								<a href="imagenes/productos/luces_led.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 portfolio-item filter-app">
+							<img src="imagenes/productos/farol_pared.png" class="img-fluid" alt="">
+							<div class="portfolio-info">
+								<h4>Farol</h4>
+								<p>Farol para pared</p>
+								<p>₡ 70000.00</p>
+								<a href="imagenes/productos/farol_pared.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section><!-- End Portfolio Section -->
+			@RenderBody()
+		</main>
+		
+	
+	<footer class="border-top footer text-muted">
+		<div class="container">
+			&copy; 2023 - PAWS_ProyectoFinal - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+		</div>
+	</footer>
+	<script src="~/js/main.js"></script>
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
+	@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+

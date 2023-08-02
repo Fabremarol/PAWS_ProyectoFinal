@@ -1,0 +1,76 @@
+@model IEnumerable<PAWS_ProyectoFinal.Models.Producto>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+	<link href="~/css/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+</head>
+<body>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreProducto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescripcionProducto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrecioProducto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StockProducto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImagenProducto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoProducto)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreProducto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescripcionProducto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecioProducto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StockProducto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImagenProducto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoProducto)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+	<script src="~/js/main.js"></script>
+</body>
+</html>
