@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kOHM/KYxJ/odWFgbnihgyywxono1rhOODBWKTn3uVbY=",
+  "Hash": "HXNMwh4k8DVhxlBvigRX+LCLzIO1oyPQLy1Q1vg4/6I=",
   "Source": "PAWS_ProyectoFinal",
   "BasePath": "_content/PAWS_ProyectoFinal",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\PAWS_ProyectoFinal.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\css\\main2.css",
+      "SourceId": "PAWS_ProyectoFinal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\",
+      "BasePath": "_content/PAWS_ProyectoFinal",
+      "RelativePath": "css/main2.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\main2.css"
     },
     {
       "Identity": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\css\\site.css",
@@ -202,6 +219,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\main.js"
+    },
+    {
+      "Identity": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\js\\main2.js",
+      "SourceId": "PAWS_ProyectoFinal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\",
+      "BasePath": "_content/PAWS_ProyectoFinal",
+      "RelativePath": "js/main2.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\main2.js"
     },
     {
       "Identity": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\js\\site.js",
@@ -1205,6 +1239,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\template\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\template\\index-2.html",
+      "SourceId": "PAWS_ProyectoFinal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\",
+      "BasePath": "_content/PAWS_ProyectoFinal",
+      "RelativePath": "template/index-2.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\template\\index-2.html"
     }
   ]
 }

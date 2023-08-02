@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\PAWS_ProyectoFinal.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\css\\main2.css",
+      "PackagePath": "staticwebassets\\css\\main2.css"
+    },
+    {
       "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -39,6 +43,10 @@
     {
       "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\js\\main.js",
       "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\js\\main2.js",
+      "PackagePath": "staticwebassets\\js\\main2.js"
     },
     {
       "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\js\\site.js",
@@ -271,6 +279,10 @@
     {
       "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\template\\index-2.html",
+      "PackagePath": "staticwebassets\\template\\index-2.html"
     },
     {
       "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\template\\index.html",
