@@ -15,6 +15,10 @@ namespace PAWS_ProyectoFinal.Controllers
 
         public IActionResult Index()
         {
+            if ( HttpContext.Session.GetString("nombre") == null) 
+            {
+              return RedirectToAction("Index","InicioSesion");
+            }
             return View();
         }
 

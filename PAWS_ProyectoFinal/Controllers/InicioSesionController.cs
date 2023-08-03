@@ -18,6 +18,9 @@ namespace PAWS_ProyectoFinal.Controllers
 
         public IActionResult Index()
         {
+            HttpContext.Session.Remove("nombre");
+            HttpContext.Session.Remove("apellido");
+            HttpContext.Session.Remove("correo");
             return View();
         }
 
@@ -31,9 +34,11 @@ namespace PAWS_ProyectoFinal.Controllers
                 {
                     return View(usuario);
                 }
-                string nombre = login.Nombre;
-                string apellido = login.Apellidos;
-                string correo = login.Correo;
+                HttpContext.Session.SetString("nombre", login.Nombre);
+                HttpContext.Session.SetString("apellido", login.Apellidos);
+                HttpContext.Session.SetString("correo", login.Correo);
+
+                //HttpContext.Session.Remove("correo");
 
                 return RedirectToAction("Index", "Home");
             }

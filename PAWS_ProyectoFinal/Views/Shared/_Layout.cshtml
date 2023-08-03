@@ -6,37 +6,40 @@
 	<title>@ViewData["Title"] - PAWS_ProyectoFinal</title>
 	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-	<link rel="stylesheet" href="~/PAWS_ProyectoFinal.styles.css" asp-append-version="true" />
-	<link href="~/css/style.css" rel="stylesheet" />
+	<link rel="stylesheet" href="~/PAWS_ProyectoFinal.styles.css" asp-append-version="true" />		
 	<link href="~/css/main2.css" rel="stylesheet" />
 	<link href="~/css/misEstilos.css" rel="stylesheet" />
-
-
+	<link href="~/css/style.css" rel="stylesheet" />
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet" />
 </head>
 <body>
 	<header id="header" class="d-flex align-items-center">
 		<div class="container d-flex align-items-center justify-content-between" style="align-items:center; justify-content:space-between">
 
-			<h1 class="logo"><a href="index.html">Felectro<span>.</span></a></h1>
+			<h1 class="logo"><a href="index.html">Felectro<span>.</span></a></h1>	
+					
 			<!-- Uncomment below if you prefer to use an image logo -->
 			<!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
 
 			<nav id="navbar" class="navbar">
 				<ul>
 					<li><a class="nav-link scrollto active" asp-area=" " asp-controller="Home" asp-action="Index">Página Principal</a></li>
-					<li><a class="nav-link scrollto" asp-area=" " asp-controller="Home" asp-action="Privacy">Privacy</a></li>
-					<li><a class="nav-link scrollto" asp-area="" asp-controller="Producto" asp-action="Index">Productos</a></li>
+					<li><a class="nav-link scrollto" asp-area=" " asp-controller="Home" asp-action="Privacy" >Privacy</a></li>
+					<li><a class="nav-link scrollto" asp-area="" asp-controller="Producto" asp-action="Index" >Productos</a></li>
+					<li><a asp-controller="InicioSesion" asp-action="Index">Cerrar Sesion</a></li>
 				</ul>
+				<div class="justify-content-between" style="align-items:center; justify-content:space-between">
+					<h6 class="form-control fondo-marca  ">@Context.Session.GetString("nombre") @Context.Session.GetString("apellido")</h6>					
+				</div>
+											
 				<i class="bi bi-list mobile-nav-toggle"></i>
 			</nav><!-- .navbar -->
 		</div>
 	</header><!-- End Header -->
 	
-		<main id="main" role="main">
-
+		<section >
 			@RenderBody()
-		</main>
+		</section>
 		
 	
 	<footer class="border-top footer text-muted">
@@ -48,8 +51,9 @@
 	<script src="~/js/main2.js"></script>
 	<script src="~/lib/jquery/dist/jquery.min.js"></script>
 	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="~/js/site.js" asp-append-version="true"></script>
+	<script src="~/js/site.js" ></script>
 	@await RenderSectionAsync("Scripts", required: false)
+	
 </body>
 </html>
 
