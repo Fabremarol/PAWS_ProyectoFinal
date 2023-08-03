@@ -6,9 +6,12 @@ namespace PAWS_ProyectoFinal.Models
     {
         [Key]
         public int Id { get; set; }
+        
         public string Nombre { get; set; }
         public string Apellidos { get; set; }
+        [Required]
         public string Correo { get; set; }
+        [Required]
         public string Contrasena { get; set; }
         public string Telefono { get; set; }
         public DateTime? UltimaConexion { get; set; }

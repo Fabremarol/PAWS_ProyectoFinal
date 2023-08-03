@@ -1,4 +1,4 @@
-﻿
+﻿@model PAWS_ProyectoFinal.Models.Usuario
 @{
     Layout = null;
 }
@@ -37,17 +37,17 @@
   <body class="text-center">
     
 <div class="form-signin card col-md-4 col-sm-12 borde-marca">
-  <form asp-action="validacion">
+  <form asp-action="Index">
     <img class="mb-4" src="~/imagenes/productos/LogoFelectro.png" alt="Logo de la compañía" width="200" height="158">
    
 
     <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <input type="email" class="form-control" asp-for="Correo"   placeholder="name@example.com">
       <label for="floatingInput">Correo Electrónico</label>
     </div>
     <br>
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <input type="password" class="form-control" asp-for="Contrasena" placeholder="Password">
       <label for="floatingPassword">Contraseña</label>
     </div>
   
