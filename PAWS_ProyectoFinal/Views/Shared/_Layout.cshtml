@@ -6,7 +6,7 @@
 	<title>@ViewData["Title"] - PAWS_ProyectoFinal</title>
 	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-	<link rel="stylesheet" href="~/PAWS_ProyectoFinal.styles.css" asp-append-version="true" />		
+	<link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />		
 	<link href="~/css/main2.css" rel="stylesheet" />
 	<link href="~/css/misEstilos.css" rel="stylesheet" />
 	<link href="~/css/style.css" rel="stylesheet" />
@@ -15,7 +15,6 @@
 <body>
 	<header id="header" class="d-flex align-items-center">
 		<div class="container d-flex align-items-center justify-content-between" style="align-items:center; justify-content:space-between">
-
 			<h1 class="logo"><a href="index.html">Felectro<span>.</span></a></h1>	
 					
 			<!-- Uncomment below if you prefer to use an image logo -->
@@ -23,16 +22,27 @@
 
 			<nav id="navbar" class="navbar">
 				<ul>
-					<li><a class="nav-link scrollto active" asp-area=" " asp-controller="Home" asp-action="Index">Página Principal</a></li>
+					<li><a class="nav-link scrollto" asp-area=" " asp-controller="Home" asp-action="Index">Página Principal</a></li>
 					<li><a class="nav-link scrollto" asp-area=" " asp-controller="Home" asp-action="Privacy" >Privacy</a></li>
+					<li><a class="nav-link scrollto" asp-area="" asp-controller="Categoria" asp-action="Index">Categorias</a></li>
 					<li><a class="nav-link scrollto" asp-area="" asp-controller="Producto" asp-action="Index" >Productos</a></li>
-					<li><a asp-controller="InicioSesion" asp-action="Index">Cerrar Sesion</a></li>
-				</ul>
-				<div class="justify-content-between" style="align-items:center; justify-content:space-between">
-					<h6 class="form-control fondo-marca  ">@Context.Session.GetString("nombre") @Context.Session.GetString("apellido")</h6>					
-				</div>
+					
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<h6 class="form-control fondo-marca  ">@Context.Session.GetString("nombre") @Context.Session.GetString("apellido")</h6>
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<li><a class="dropdown-item" href="#">Action</a></li>
+							<li><a class="dropdown-item" href="#">Another action</a></li>
+							<li><a asp-controller="InicioSesion" asp-action="Index">Cerrar Sesion</a></li>
+						</ul>
+						 
+					</li>
+				</ul>				
 											
-				<i class="bi bi-list mobile-nav-toggle"></i>
+				<i class="bi bi-list mobile-nav-toggle align-items-center ">
+					<img src="~/imagenes/logos/menu_01.png" width="30" height="30" />
+				</i>
 			</nav><!-- .navbar -->
 		</div>
 	</header><!-- End Header -->
@@ -47,8 +57,7 @@
 			&copy; 2023 - PAWS_ProyectoFinal - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
 		</div>
 	</footer>
-	<script src="~/js/main.js"></script>
-	<script src="~/js/main2.js"></script>
+	<script src="~/js/main.js"></script>	
 	<script src="~/lib/jquery/dist/jquery.min.js"></script>
 	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="~/js/site.js" ></script>

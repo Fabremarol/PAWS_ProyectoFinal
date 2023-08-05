@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LjmWlwqaTo0EPAt61iUkTyEKC6UhngNbJgJKQHMi7p0=",
+  "Hash": "97lynr6Ub0WXFQwDzlA4q17ZmdTJKoz0gA6dpkuvH+s=",
   "Source": "PAWS_ProyectoFinal",
   "BasePath": "_content/PAWS_ProyectoFinal",
   "Mode": "Default",
@@ -136,6 +136,40 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\imagenes\\logos\\LogoFelectro.png",
+      "SourceId": "PAWS_ProyectoFinal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\",
+      "BasePath": "_content/PAWS_ProyectoFinal",
+      "RelativePath": "imagenes/logos/LogoFelectro.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagenes\\logos\\LogoFelectro.png"
+    },
+    {
+      "Identity": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\imagenes\\logos\\Menu_01.png",
+      "SourceId": "PAWS_ProyectoFinal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\",
+      "BasePath": "_content/PAWS_ProyectoFinal",
+      "RelativePath": "imagenes/logos/Menu_01.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagenes\\logos\\Menu_01.png"
+    },
+    {
       "Identity": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\imagenes\\productos\\caja_herramientas.png",
       "SourceId": "PAWS_ProyectoFinal",
       "SourceType": "Discovered",
@@ -185,23 +219,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imagenes\\productos\\juego_desatornillador.png"
-    },
-    {
-      "Identity": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\imagenes\\productos\\LogoFelectro.png",
-      "SourceId": "PAWS_ProyectoFinal",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\",
-      "BasePath": "_content/PAWS_ProyectoFinal",
-      "RelativePath": "imagenes/productos/LogoFelectro.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\imagenes\\productos\\LogoFelectro.png"
     },
     {
       "Identity": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\imagenes\\productos\\luces_led.png",

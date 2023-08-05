@@ -11,6 +11,6 @@
         public decimal MontoTotal { get; set; }
         public DateTime FechaRegistro { get; set; }
 
-        public List<DetalleVenta> DetalleVentas { get; set; }
+        public List<DetalleVenta>? DetalleVentas { get; set; }
     }
 }

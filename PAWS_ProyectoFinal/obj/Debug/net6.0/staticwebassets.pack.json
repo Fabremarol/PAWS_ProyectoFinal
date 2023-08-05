@@ -25,8 +25,12 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\imagenes\\productos\\LogoFelectro.png",
-      "PackagePath": "staticwebassets\\imagenes\\productos\\LogoFelectro.png"
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\imagenes\\logos\\LogoFelectro.png",
+      "PackagePath": "staticwebassets\\imagenes\\logos\\LogoFelectro.png"
+    },
+    {
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\imagenes\\logos\\Menu_01.png",
+      "PackagePath": "staticwebassets\\imagenes\\logos\\Menu_01.png"
     },
     {
       "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\imagenes\\productos\\caja_herramientas.png",

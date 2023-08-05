@@ -4,58 +4,36 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.NombreProducto)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DescripcionProducto)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PrecioProducto)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.StockProducto)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ImagenProducto)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EstadoProducto)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
+
+@foreach (var item in Model)
+{
+    <div class="card border border-info col-md-4 col-sm-12">
+        <div class="card-body">
+            <div>
+                <img src="data:image/jpg; base64, @item.ImagenProducto" class="rounded" width="200">
+            </div>
+            <div>
                 @Html.DisplayFor(modelItem => item.NombreProducto)
-            </td>
-            <td>
+            </div>
+            <div>
                 @Html.DisplayFor(modelItem => item.DescripcionProducto)
-            </td>
-            <td>
+            </div>
+            <div>
                 @Html.DisplayFor(modelItem => item.PrecioProducto)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StockProducto)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ImagenProducto)
-            </td>
-            <td>
+            </div>
+            <div>
                 @Html.DisplayFor(modelItem => item.EstadoProducto)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+            </div>
+            <div>
+                @Html.DisplayFor(modelItem => item.Categoria.NombreCategoria)
+            </div>
+            <hr />
+            <div>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a>
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
+            </div>
+        </div>
+    </div>
+
 }
-    </tbody>
-</table>
-	<script src="~/js/main.js"></script>

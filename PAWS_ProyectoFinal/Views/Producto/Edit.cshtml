@@ -21,6 +21,11 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
+                <label asp-for="CategoriaId" class="control-label"></label>
+                <select asp-for="CategoriaId" class="form-control" asp-items="ViewBag.CategoriaId"></select>
+                <span asp-validation-for="CategoriaId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="NombreProducto" class="control-label"></label>
                 <input asp-for="NombreProducto" class="form-control" />
                 <span asp-validation-for="NombreProducto" class="text-danger"></span>
@@ -35,20 +40,15 @@
                 <input asp-for="PrecioProducto" class="form-control" />
                 <span asp-validation-for="PrecioProducto" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="StockProducto" class="control-label"></label>
-                <input asp-for="StockProducto" class="form-control" />
-                <span asp-validation-for="StockProducto" class="text-danger"></span>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="EstadoProducto" /> @Html.DisplayNameFor(model => model.EstadoProducto)
+                </label>
             </div>
             <div class="form-group">
                 <label asp-for="ImagenProducto" class="control-label"></label>
                 <input asp-for="ImagenProducto" class="form-control" />
                 <span asp-validation-for="ImagenProducto" class="text-danger"></span>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="EstadoProducto" /> @Html.DisplayNameFor(model => model.EstadoProducto)
-                </label>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

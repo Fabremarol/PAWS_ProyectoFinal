@@ -12,8 +12,8 @@ using PAWS_ProyectoFinal.Models;
 namespace PAWS_ProyectoFinal.Migrations
 {
     [DbContext(typeof(PAWSContext))]
-    [Migration("20230802200031_MigracionBD2")]
-    partial class MigracionBD2
+    [Migration("20230805085643_MigracionInicialCorregida")]
+    partial class MigracionInicialCorregida
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -36,15 +36,7 @@ namespace PAWS_ProyectoFinal.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("ProductoId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Producto_ID")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("ProductoId");
 
                     b.ToTable("Categoria");
                 });
@@ -87,6 +79,9 @@ namespace PAWS_ProyectoFinal.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<int>("CategoriaId")
+                        .HasColumnType("int");
+
                     b.Property<string>("DescripcionProducto")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -102,13 +97,12 @@ namespace PAWS_ProyectoFinal.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("PrecioProducto")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<int>("StockProducto")
+                    b.Property<int>("PrecioProducto")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CategoriaId");
 
                     b.ToTable("Producto");
                 });
@@ -230,15 +224,6 @@ namespace PAWS_ProyectoFinal.Migrations
                     b.ToTable("Venta");
                 });
 
-            modelBuilder.Entity("PAWS_ProyectoFinal.Models.Categoria", b =>
-                {
-                    b.HasOne("PAWS_ProyectoFinal.Models.Producto", "Producto")
-                        .WithMany("Categorias")
-                        .HasForeignKey("ProductoId");
-
-                    b.Navigation("Producto");
-                });
-
             modelBuilder.Entity("PAWS_ProyectoFinal.Models.DetalleVenta", b =>
                 {
                     b.HasOne("PAWS_ProyectoFinal.Models.Venta", "Venta")
@@ -250,7 +235,18 @@ namespace PAWS_ProyectoFinal.Migrations
 
             modelBuilder.Entity("PAWS_ProyectoFinal.Models.Producto", b =>
                 {
-                    b.Navigation("Categorias");
+                    b.HasOne("PAWS_ProyectoFinal.Models.Categoria", "Categoria")
+                        .WithMany("Productos")
+                        .HasForeignKey("CategoriaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Categoria");
+                });
+
+            modelBuilder.Entity("PAWS_ProyectoFinal.Models.Categoria", b =>
+                {
+                    b.Navigation("Productos");
                 });
 
             modelBuilder.Entity("PAWS_ProyectoFinal.Models.Venta", b =>

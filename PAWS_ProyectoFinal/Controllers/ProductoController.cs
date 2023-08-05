@@ -12,19 +12,17 @@ namespace PAWS_ProyectoFinal.Controllers
     public class ProductoController : Controller
     {
         private readonly PAWSContext _context;
-       
 
         public ProductoController(PAWSContext context)
         {
             _context = context;
-           
-
         }
 
         // GET: Producto
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Producto.ToListAsync());
+            var pAWSContext = _context.Producto.Include(p => p.Categoria);
+            return View(await pAWSContext.ToListAsync());
         }
 
         // GET: Producto/Details/5
@@ -36,6 +34,7 @@ namespace PAWS_ProyectoFinal.Controllers
             }
 
             var producto = await _context.Producto
+                .Include(p => p.Categoria)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (producto == null)
             {
@@ -48,6 +47,7 @@ namespace PAWS_ProyectoFinal.Controllers
         // GET: Producto/Create
         public IActionResult Create()
         {
+            ViewData["CategoriaId"] = new SelectList(_context.Categoria, "Id", "NombreCategoria");
             return View();
         }
 
@@ -56,14 +56,30 @@ namespace PAWS_ProyectoFinal.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,NombreProducto,DescripcionProducto,PrecioProducto,StockProducto,ImagenProducto,EstadoProducto")] Producto producto)
+        public async Task<IActionResult> Create([Bind("Id,CategoriaId,NombreProducto,DescripcionProducto,PrecioProducto,EstadoProducto,ImagenProducto")] Producto producto)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(producto);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                byte[] bytes;
+                if (producto.File != null)
+                {
+                    using (Stream fs = producto.File.OpenReadStream())
+                    {
+                        using (BinaryReader br = new(fs))
+                        {
+                            bytes = br.ReadBytes((int)fs.Length);
+                            producto.ImagenProducto = Convert.ToBase64String(bytes, 0, bytes.Length);
+                        }
+                    }
+                    _context.Add(producto);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+
+                }
+                ViewData["CategoriaId"] = new SelectList(_context.Categoria, "Id", "NombreCategoria", producto.CategoriaId);
+                return View(producto);
             }
+            ViewData["CategoriaId"] = new SelectList(_context.Categoria, "Id", "NombreCategoria", producto.CategoriaId);
             return View(producto);
         }
 
@@ -80,6 +96,7 @@ namespace PAWS_ProyectoFinal.Controllers
             {
                 return NotFound();
             }
+            ViewData["CategoriaId"] = new SelectList(_context.Categoria, "Id", "Id", producto.CategoriaId);
             return View(producto);
         }
 
@@ -88,7 +105,7 @@ namespace PAWS_ProyectoFinal.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,NombreProducto,DescripcionProducto,PrecioProducto,StockProducto,ImagenProducto,EstadoProducto")] Producto producto)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,CategoriaId,NombreProducto,DescripcionProducto,PrecioProducto,EstadoProducto,ImagenProducto")] Producto producto)
         {
             if (id != producto.Id)
             {
@@ -115,6 +132,7 @@ namespace PAWS_ProyectoFinal.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["CategoriaId"] = new SelectList(_context.Categoria, "Id", "Id", producto.CategoriaId);
             return View(producto);
         }
 
@@ -127,6 +145,7 @@ namespace PAWS_ProyectoFinal.Controllers
             }
 
             var producto = await _context.Producto
+                .Include(p => p.Categoria)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (producto == null)
             {

@@ -2,10 +2,9 @@
 {
     public class Categoria
     {
-        public int Id { get; set; }
-        public int Producto_ID { get; set; }
+        public int Id { get; set; }        
         public string NombreCategoria { get; set; }
-        public Producto? Producto { get; set; }
+        public List<Producto>? Productos { get; set; }
 
     }
 }
